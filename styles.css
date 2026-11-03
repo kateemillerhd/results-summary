@@ -2,4 +2,250 @@
 
 :root {
     --hanken: "Hanken Grotesk", sans-serif;
+    --white: hsl(0, 0%, 100%);
+    --paleblue: hsl(221, 100%, 96%);
+    --lavender: hsl(241, 100%, 89%);
+    --semilavender: hsla(241, 100%, 89%, .5);
+    --grayblue: hsl(224, 30%, 27%);
+    --graybluea: hsla(224, 30%, 27%, .5);
+    --red: hsla(0, 100%, 67%, .7);
+    --reda: hsla(0, 100%, 67%, .07);
+    --orange: hsla(39, 100%, 56%, .8);
+    --orangea: hsla(39, 100%, 56%, .07);
+    --green: hsla(166, 100%, 37%, .7);
+    --greena: hsla(166, 100%, 37%, .07);
+    --cobalt: hsla(234, 85%, 45%, .7);
+    --cobalta: hsla(234, 85%, 45%, .07);
+    --bgslate: hsla(252, 100%, 67%, 1);
+    --bgroyal: hsl(241, 81%, 54%);
+    --circleviolet: hsla(256, 72%, 46%, 0);
+    --circlepersian: hsla(241, 72%, 46%, .6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.results-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--hanken);
+}
+
+.results-top {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-block-start: 2rem;
+    border-radius: 0 0 22px 22px;
+
+    background-image: linear-gradient(to bottom, var(--bgslate), var(--bgroyal));
+
+}
+
+.your-result {
+    font-size: 20px;
+    color: var(--lavender);
+    font-weight: 700;
+    margin-block-end: 2rem;
+}
+
+.rank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-image: linear-gradient(to bottom, var(--circlepersian), var(--circleviolet));
+    
+    padding-block: 35px;
+    padding-inline: 50px;
+    border-radius: 100%;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 54px;
+}
+
+.rank p {
+    color: var(--semilavender);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+h2 {
+    color: var(--white);
+    font-size: 26px;
+
+    padding-block-start: 1rem;
+    padding-block-end: .5rem;
+}
+
+.placement {
+    padding-inline: 3.5rem;
+    font-size: 16px;
+    color: var(--lavender);
+    font-weight: 500;
+
+    margin-block-end: 2rem;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 0.25px;
+}
+
+.results-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-block-start: 1.5rem;
+    padding-block-end: 1.5rem;
+}
+
+h3 {
+    width: 100%;
+    font-size: 18px;
+    color: var(--grayblue);
+    font-weight: 900;
+    padding-block-end: 2rem;
+    padding-inline-start: 2rem;
+}
+
+.stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-block-end: 2rem;
+}
+
+.stat-container {
+    width: 85%;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.category {
+    display: flex;
+    gap: .5rem;
+}
+
+strong {
+    color: var(--grayblue);
+    font-weight: 900;
+    padding-inline-end: 8px;
+}
+
+span {
+    color: var(--graybluea);
+    font-weight: 700;
+}
+
+#reaction {
+    background-color: var(--reda);
+    
+}
+
+#reaction h4 {
+    color: var(--red);
+}
+
+#memory {
+    background-color: var(--orangea);
+}
+
+#memory h4 {
+    color: var(--orange);
+}
+
+#verbal {
+    background-color: var(--greena);
+}
+
+#verbal h4 {
+    color: var(--green);
+}
+
+#visual {
+    background-color: var(--cobalta);
+}
+
+#visual h4 {
+    color: var(--cobalt);
+}
+
+button {
+    width: 85%;
+    align-self: center;
+    padding: 15px;
+    font-family: var(--hanken);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: var(--white);
+    background-color: var(--grayblue);
+    border-radius: 50px;
+}
+
+@media (min-width: 1024px) {
+    body {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        background-color: var(--paleblue);
+    }
+    .results-container {
+        width: 65%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: -5px;
+    }
+
+    .results-top {
+        height: 100%;
+        border-radius: 18px;
+        padding-block-start: 0;
+    }
+
+    .results-bottom {
+        height: 100%;
+        background-color: white;
+        border-radius: 0 18px 18px 0;
+    }
+
+    h3 {
+        padding: 0 0 .5rem 2rem;
+    }
+
+    .placement {
+        margin-block-end: 0;
+    }
+
+    .stats {
+        gap: .5rem;
+        margin-block-end: 1rem;
+    }
 }
