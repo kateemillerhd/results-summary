@@ -208,6 +208,11 @@ button {
     border-radius: 50px;
 }
 
+button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, var(--bgslate), var(--bgroyal));
+}
+
 @media (min-width: 1024px) {
     body {
         width: 100%;
